@@ -160,6 +160,7 @@ html,body{
     position:relative;
     width: 100%;
     background: #000000;
+    height: 88px;
 }
 
 /*.sticky-wrapper */
