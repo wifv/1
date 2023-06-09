@@ -1818,7 +1818,7 @@ pre code {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
 }
 
 @media (min-width: 1000px) {
@@ -4824,7 +4824,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 
     .navbar-right {
         float: right!important;
-        margin-right: -15px
+        margin-right: -134px
     }
 
     .navbar-right~.navbar-right {

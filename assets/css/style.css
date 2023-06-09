@@ -1497,6 +1497,8 @@ html,body{
 
 }
 
+
+
 /*========================Thank you=================*/
 
 
@@ -1555,9 +1557,4 @@ html,body{
 .button-submit:hover {
     background-color: #000000;
     color: #ffffff;
-}
-
-
-.smooth {
-
 }

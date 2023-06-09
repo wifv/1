@@ -98,7 +98,7 @@
 
 
 @media screen and (max-width:1000px){
-	.sticky-wrapper .navbar-collapse.collapse.in{background: #0c0c0c;width: 112%;margin-left: -14px;padding-left: 27px;}
+	.sticky-wrapper .navbar-collapse.collapse.in{background: #0c0c0c; position: relative; width: 112%; margin-left: -14px; padding-left: 27px; bottom: 10px; right: 10px;}
 	.logo {float: left; font-size: large;}
 	.main-menu .navbar-toggle {float: right; margin: 17px 0; bottom: 14px;}
 	.navbar-collapse {padding-right: 15px;padding-left: 15px;}
