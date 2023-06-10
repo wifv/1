@@ -1501,6 +1501,10 @@ html,body{
 
 /*========================Thank you=================*/
 
+#text1 {color: black;}
+#text2 {color: black; left: 0; width: fit-content;}
+#text3 {color: black;}
+
 
 
 /*Ayubxon lo'x*/
