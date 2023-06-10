@@ -4,21 +4,24 @@
         left: 130px;
         top: 120px;
     }
-
+    
     .col-sm-10 {
         top: 5px;
     }
-
+    
     .foot-icons .footer-social-links a {
         position: relative;
         left: 540px;
         top: 15px;
     }
-
+    
     .single-footer-item {
         position: relative;
         left: 700px;
     }
+
+    #our-contact {left: -290px;}
+    #footer-img {position: relative; right: -200px;}
 }
 
 @media screen and (max-width:1366px){
@@ -65,6 +68,7 @@
 	.thumbnail-img-overlay{left: 0px;}
 
 	.footer-logo {padding-top: 0;}
+
 	
 
 }

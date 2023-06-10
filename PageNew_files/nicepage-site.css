@@ -16358,12 +16358,6 @@ a.u-link.u-text-hover-grey-90:hover {
         font-size: 1.875rem;
         }
         }
-        @media (max-width: 1199px) {
-        h1:not(.u-title)
-        {
-        font-size: 3.75rem;
-        }
-        }
         @media (max-width: 767px) {
         h1:not(.u-title)
         {
