@@ -137,7 +137,7 @@
                 <div class="col-sm-12">
                     <div class="single-about-us">
                         <div class="about-us-txt" style="position: relative; top: 40px;">
-                            <h2>
+                            <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
                                 Исследуйте красоту прекрасного мира
                             </h2>
                             <div class="about-btn">
@@ -810,13 +810,13 @@
                 <div class="u-form-group u-form-partition-factor-2 u-form-group-4">
                     <label for="text-bd2f" class="u-label u-text-grey-40 u-label-4">Subject</label>
                     <input type="text" placeholder="" id="text-bd2f" name="text"
-                           class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white">
+                    class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white">
                 </div>
                 <div class="u-form-group u-form-message">
                     <label for="message-7dcd" class="u-label u-text-grey-40 u-label-5">Message</label>
                     <textarea placeholder="Enter your message" rows="4" cols="50" id="message-7dcd" name="message"
-                              class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white"
-                              required=""></textarea>
+                    class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white"
+                    required=""></textarea>
                 </div>
                 <button type="submit" id="buttonjon" class="button button-submit">Submit</button>
             </form>
@@ -835,12 +835,12 @@
     {
         position: relative;
         background-color:#000000;
-        padding-top:45px;
+        padding-top:24px;
         font-size:15px;
         line-height:24px;
         color:#737373;
-
-
+        
+        
     }
     .site-footer hr
     {
@@ -904,21 +904,21 @@
     {
         margin:0
     }
-           
+    
     .social-icons {bottom: 50px;}
-
+    
     @media (min-width: 992px) {
         .site-footer {height: 27vh; bottom: -40px;}
         body {}
     }
-
+    
     @media (max-width:991px)
     {
         .site-footer {height: 49vh; bottom: -2.5vh;}
         #cop {left: -3px; top: 30px;}
         #our-contact
         {
-            top: -380px;
+            top: -360px;
             left: -45px;
         }
         .social-icons
@@ -928,6 +928,7 @@
         }
     }
     
+    #nomerjon {display: none; color: rgb(219, 219, 219); font-size: medium;}
     
     @media (max-width: 645px) {
         #our-contact {display: none;}
@@ -935,6 +936,8 @@
         .rowjon {text-align: center;}
         .button-submit {left: 6px;}
         #form-contact {position: relative; left: 4px;}
+        #nomerjon {display:block; position: relative; right: 7px; top: 25px;}
+        #cop {top: 20px;}
     }
 
 
@@ -1070,57 +1073,66 @@
 <footer id="footer" class="site-footer">
         <span class="rowjon">
  
+            <span id="footer-wrapper">
+                <span class="col-sm-12 col-md-6">
+                    <p class="text-justify" style="position:relative; bottom: 44px; font-size: 40px;"><img src="./assets/images/imagege.jpg" alt="" id="footer-img" style="width: 300px"></p>
+                </span>
+        
+                <span class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="instagram" href="https://instagram.com"><i class="fa fa-instagram"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                    <span id="nomerjon"><a href="tel:+998993057664" style="font-size: medium; color: white;">+998 99 305 76 64</a></span>
+                    <span id="cop" style="position: relative; right: 90px; top: 57px; text-align: center;">Copyright 2023 wifv<br><span style="visibility: hidden;">x</span>All right reserved.</span>
+                </span>
 
-            <span class="col-sm-12 col-md-6">
-                <p class="text-justify" style="position:relative; bottom: 44px; font-size: 40px;"><img src="./assets/images/imagege.jpg" alt="" id="footer-img" style="width: 300px"></p>
+                <div class="container" id="our-contact" style=
+                    "position: relative;
+                    color: white; 
+                    max-width: fit-content;
+                    float: right;
+                    bottom: 130px;
+                    right: 40px;"
+                    >
+                    <h1 style="color: white; position: relative; right: 3px;">Contact</h1>
+                    <p style="color: rgb(219, 219, 219); font-size: medium; position: relative; top: 8px; margin-bottom: 10px;">abcdefg@gmail.com</p>
+                    <a href="tel:" style="position: relative; color: rgb(219, 219, 219); font-size: medium;">+555 888 8666</a><br>
+                    <a href="tel:"><p style="color: rgb(219, 219, 219); font-size: medium;">+998 99 305 76 64 <br>   toshkent ad fasdf ddasf</p></a>
+                    
+                </div>
+                <br>
             </span>
-    
-            <span class="col-md-4 col-sm-6 col-xs-12">
-                <ul class="social-icons">
-                    <li><a class="instagram" href="https://instagram.com"><i class="fa fa-instagram"></i></a></li>
-                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-                <span id="cop" style="position: relative; right: 90px; top: 57px; text-align: center;">Copyright 2023 wifv<br><span style="visibility: hidden;">x</span>All right reserved.</span>
-            </span>
-
-            <div class="container" id="our-contact" style=
-                "position: relative;
-                color: white; 
-                max-width: fit-content;
-                float: right;
-                bottom: 130px;
-                right: 40px;"
-                >
-                <h1 style="color: white;">Contact</h1>
-                <p style="color: rgb(219, 219, 219); font-size: medium;">abcdefg@gmail.com</p>
-                <a href="tel:"><p style="color: rgb(219, 219, 219); font-size: medium;">+998 99 305 76 64</p></a>
-            </div>
-            <br>
-
         </span>
 </footer>
 
 <style>
-    #instagram-fixed {display: none; position: fixed; bottom: 4px; right: -4px;}
-    #number2 {display: none;}
+    /* #instagram-fixed {display: none; position: fixed; bottom: 4px; right: -4px;} */
 
-    @media (min-width: 1294px) {
+    @media (min-width: 646px) {
+        #footer-wrapper {position: relative; top: 20px;}
+        #footer-img {position: relative; top: 25px;}
+    }
+
+    @media (min-width: 576px) {
+        .u-section-1 {margin-bottom: -285px;}
+    }
+    
+    @media (min-width: 1337px) {
         #our-contact {top: -38px;}
     }
 
     @media (max-width: 539px) {
         #number {display: none;}
-        #number2 {display: block;}
-        #instagram-fixed {display: block;}
+        /* #instagram-fixed {display: block;} */
     }
     /* @media (max-width: 375px) {
         #number2 {top: 94.5%; left: 20px;}
     } */
 </style>
 
-<span><a href="tel:+998993057664"><span id="number2" style="position: fixed; bottom: 13px; right: 60px; background-color: rgb(0, 0, 0, 0.4); font-size: medium; border-radius: 3px;">+998 99 305 76 64</span></a></span>
-<a id="instagram-fixed" class="instagram" href="https://instagram.com"><i class="fa fa-instagram"></i></a>
+<!-- <a id="instagram-fixed" class="instagram" href="https://instagram.com"><i class="fa fa-instagram"></i></a> -->
 
 
 <script src="assets/js/jquery.js"></script>
