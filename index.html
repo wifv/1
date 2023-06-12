@@ -368,7 +368,7 @@
                                 </p>
                             </div><!--/.packages-review-->
                             <div class="about-btn">
-                                <a href="#form-text">
+                                <a class="package-buy" onclick="buy()">
                                     <button class="about-view packages-btn">
                                         Бронировать
                                     </button>
@@ -401,7 +401,7 @@
                                 </p>
                             </div><!--/.packages-review-->
                             <div class="about-btn">
-                                <a href="#form-text">
+                                <a class="package-buy" onclick="buy()">
                                     <button class="about-view packages-btn">
                                         Бронировать
                                     </button>
@@ -434,7 +434,7 @@
                                 </p>
                             </div><!--/.packages-review-->
                             <div class="about-btn">
-                                <a href="#form-text">
+                                <a class="package-buy" onclick="buy()">
                                     <button class="about-view packages-btn">
                                         Бронировать
                                     </button>
@@ -468,7 +468,7 @@
                                 </p>
                             </div><!--/.packages-review-->
                             <div class="about-btn">
-                                <a href="#form-text">
+                                <a class="package-buy" onclick="buy()">
                                     <button class="about-view packages-btn">
                                         Бронировать
                                     </button>
@@ -502,7 +502,7 @@
                                 </p>
                             </div><!--/.packages-review-->
                             <div class="about-btn">
-                                <a href="#form-text">
+                                <a class="package-buy" onclick="buy()">
                                     <button class="about-view packages-btn">
                                         Бронировать
                                     </button>
@@ -536,7 +536,7 @@
                                 </p>
                             </div><!--/.packages-review-->
                             <div class="about-btn">
-                                <a href="#form-text">
+                                <a class="package-buy" onclick="buy()">
                                     <button class="about-view packages-btn">
                                         Бронировать
                                     </button>
@@ -553,6 +553,48 @@
 
 </section><!--/.packages-->
 <!--packages end-->
+
+
+<div id="brone">
+    <i id="x-button" class="fa-solid fa-x fa-2xl" onclick="unbuy()"></i>
+</div>
+
+
+<style>
+    #brone {
+        position: fixed;
+        display: none;
+        background-color: rgb(50, 50, 50, 0.3);
+        left: 10%;
+        bottom: 10%;
+        width: 80%;
+        height: 80%;
+        border-radius: 7px;
+    }
+    #x-button {
+        margin: 10px;
+        position:relative;
+        float: right;
+        top: 14px;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    let x = document.getElementById("x-button");
+    let div = document.getElementById("brone");
+
+    function buy() {
+        $('#brone').slideDown(500);
+    }
+
+    function unbuy() {
+        $('#brone').slideUp()
+    }
+
+</script>
+
+
 
 <!--special-offer start-->
 <section id="spo" class="special-offer">
@@ -622,7 +664,7 @@
                            class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white" required="">
                 </div>
                 <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-2">
-                    <label for="name-a352" class="u-label u-text-grey-40 u-label-2">Фамилие</label>
+                    <label for="name-a352" class="u-label u-text-grey-40 u-label-2">номер</label>
                     <input type="text" placeholder="Enter your Last Name" id="lastName" name="name-1"
                            class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white" required="">
                 </div>
@@ -769,8 +811,8 @@
             bottom: 30px;
         }
         .about-us-v1 {
-            width: 440px;
-            height: 380px;
+            width: 100%;
+            height: 375px;
             font-size: 9px;
         }
         .button-about {
@@ -788,7 +830,7 @@
             font-size: 13px;
         }
         .about-us-v1 {
-            width: 100%;
+            padding: 15px;
             height: 260px;
             font-size: 9px;
         }
@@ -798,7 +840,7 @@
         }
     }
 
-    @media (max-width: 399px) {
+    @media (max-width: 422px) {
         .about-us-v1 {height: 290px;}
     }
     
@@ -959,6 +1001,11 @@
     } */
 </style>
 
+
+
+
+
+
 <!-- <a id="instagram-fixed" class="instagram" href="https://instagram.com"><i class="fa fa-instagram"></i></a> -->
 
 
@@ -1000,7 +1047,7 @@
 <script src="assets/js/custom.js"></script>
 
 
-<!-- <script> // DON'T USE UNLESS FOR TESTING THE RESPONSIVNES
+<script>
     let a = document.getElementById("change");
     let b = document.getElementById("change2")
 
@@ -1010,23 +1057,23 @@
         b.className = "col-md-4"
     }
 
-    setInterval(() => {
-        let width = window.innerWidth
-        if(width < 992) {
-            a.className = "col-md-4";
-            b.className = "col-md-4";
-        } else {
-            a.className = "col-md-6";
-            b.className = "col-md-6";
-        }
-        console.log(a)
-        console.log(width)
-    },100000) -->
+    // setInterval(() => { // DON'T USE UNLESS FOR TESTING THE RESPONSIVNES
+    //     let width = window.innerWidth
+    //     if(width < 992) {
+    //         a.className = "col-md-4";
+    //         b.className = "col-md-4";
+    //     } else {
+    //         a.className = "col-md-6";
+    //         b.className = "col-md-6";
+    //     }
+    //     console.log(a)
+    //     console.log(width)
+    // },500)
 
 
 </script>
 
-
+<script src="https://kit.fontawesome.com/85edc960b6.js" crossorigin="anonymous"></script>
 
 <script>
     // const form = document.getElementById("formContact")
