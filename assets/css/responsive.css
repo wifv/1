@@ -61,7 +61,7 @@
 	.single-service-box {flex-direction: column;height: auto;}
 	.service-content {margin: 0 auto; margin-top: 30px;}
 
-	.single-package-item {max-width: 450px;margin: 0 auto;margin-bottom: 30px;}
+	.single-package-item {max-width: 370px;margin: 0 auto;margin-bottom: 30px;}
 
 	.single-special-offer {margin-bottom: 30px;}
 
@@ -145,7 +145,6 @@
     #turkey-img {top: -18px;}
 }
 
-
 @media screen and (min-width: 992px) {
     #bad {left: 0px;}
     #bad-pic {left: 0px; top: 0px;}
@@ -153,11 +152,9 @@
 
 @media screen and (max-width: 806px){
     #bad {left: 0px;}
-    #bad-pic {left: 0px; top: 0px;}
 }
-@media (min-width: 807px) and (max-width: 889px) {
+@media (min-width: 807px) and (max-width: 991px) {
     #praga {position: relative; left: -5px;}
-    #maldives {position: relative; }
 }
 
 @media screen and (max-width: 660px){
