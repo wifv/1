@@ -728,6 +728,7 @@ html,body{
 
 /* ---- .item ---- */
 .filtr-container .filtr-item {
+    cursor: pointer;
     overflow:hidden;
     float: left;
     position:relative;

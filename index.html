@@ -555,28 +555,83 @@
 <!--packages end-->
 
 
-<div id="brone">
-    <i id="x-button" class="fa-solid fa-x fa-2xl" onclick="unbuy()"></i>
-</div>
+
+<form id="ch" method="post" class="u-clearfix u-form-spacing-20 u-form-vertical u-inner-form" style="
+    padding: 30px;
+    border-color: black;
+    position: fixed;
+    margin: 0;
+    border-radius: 7px;"
+>
+<i id="x-button" class="fa-solid fa-x fa-2xl" onclick="unbuy()"></i>
+    <span class="ch-container">
+        <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-1" style="padding: 0;padding-top: 20px; margin: 0; color: white;">
+                <label for="name-a352" class="u-label u-text-white-40 u-label-1">Имя</label>
+                <input type="text" placeholder="Enter your First Name" id="firstName" name="name"
+                    class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white" required="">
+        </div>
+        <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-2" style="padding: 0;padding-top: 20px; margin: 0; color: white;">
+            <label for="name-a352" class="u-label u-text-white-40 u-label-2">номер</label>
+            <input type="text" placeholder="Enter your number" id="lastName" name="name-1"
+                class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white" required="">
+        </div>
+        <div class="u-form-group u-form-message" style="padding: 0;padding-top: 20px; margin-bottom: 10px; color: white;">
+            <label for="message-7dcd" class="u-label u-text-white-40 u-label-5">Ваше сообщение</label>
+            <textarea placeholder="Enter your message" rows="4" cols="50" id="message-7dcd" name="message"
+                    class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white"></textarea>
+        </div>
+        <button type="button" id="buttonjon" class="button button-submit" style="left: 50%; transform: translate(-50%, 0);">Submit</button>
+    </span>
+</form>
 
 
 <style>
-    #brone {
+
+    #ch {
         position: fixed;
         display: none;
-        background-color: rgb(50, 50, 50, 0.3);
-        left: 10%;
-        bottom: 10%;
-        width: 80%;
-        height: 80%;
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 60%;
+        height: 60%;
         border-radius: 7px;
+        top: 20%;
+        left: 20%;
     }
+
     #x-button {
-        margin: 10px;
-        position:relative;
-        float: right;
-        top: 14px;
+        top: 0;
+        right: 0;
+        position: absolute;
         cursor: pointer;
+        margin-top: 25px;
+        margin-right: 10px;
+    }
+    @media (min-width: 1440px) {
+        #ch {width: 50%; left: 25%;}
+    }
+    @media (min-width: 1750px) {
+        #ch {width: 40%; left: 30%;}
+    }
+    @media (max-width: 767px) {
+        #ch {height: 60%; width: 100%; left: 0;}
+    }
+    @media screen and (max-height: 700px) {
+        #ch {height: 79%;}
+    }
+    @media screen and (max-height: 800px) {
+        #ch {height: 70%;}
+    }
+    @media screen and (min-height: 975px) {
+        #ch {height: 54%;}
+    }
+    @media screen and (min-height: 1050px) {
+        #ch {height: 48%;}
+    }
+    @media screen and (min-height: 1180px) {
+        #ch {height: 44%;}
+    }
+    @media screen and (min-height: 1300px) {
+        #ch {height: 38%;}
     }
 </style>
 
@@ -585,11 +640,11 @@
     let div = document.getElementById("brone");
 
     function buy() {
-        $('#brone').slideDown(500);
+        $('#ch').slideDown(500);
     }
 
     function unbuy() {
-        $('#brone').slideUp()
+        $('#ch').slideUp()
     }
 
 </script>
@@ -671,11 +726,6 @@
                 <div class="u-form-email u-form-group u-form-partition-factor-2">
                     <label for="email-7dcd" class="u-label u-text-grey-40 u-label-3">И-мэйл</label>
                     <input type="email" placeholder="Enter a valid email address" id="email-7dcd" name="email"
-                           class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white" required="">
-                </div>
-                <div class="u-form-group u-form-partition-factor-2 u-form-group-4">
-                    <label for="text-bd2f" class="u-label u-text-grey-40 u-label-4">Тема</label>
-                    <input type="text" placeholder="" id="text-bd2f" name="text"
                            class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white">
                 </div>
                 <div class="u-form-group u-form-message">
@@ -985,7 +1035,7 @@
     }
 
     @media (min-width: 576px) {
-        .u-section-1 {margin-bottom: -285px;}
+        .u-section-1 {margin-bottom: -185px;}
     }
     
     @media (min-width: 1337px) {
