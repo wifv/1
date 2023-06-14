@@ -757,8 +757,8 @@
                     
                 </div><!--/.col-->
                 
-                <div class="bottom-top-container"><i class="fa-solid fa-caret-down fa-4x" id="bottom" onclick="bottomClick()"></i></div>
-                <div class="bottom-top-container"><i class="fa-solid fa-caret-up fa-4x" id="top" onclick="topClick()"></i></div>
+                <div class="bottom-top-container responsive-bottom" id="bottom-container" onclick="bottomClick()"><i class="fa-solid fa-caret-down fa-4x" id="bottom"></i></div>
+                <div class="bottom-top-container responsive-top" id="top-container" onclick="topClick()"><i class="fa-solid fa-caret-up fa-4x" id="top" ></i></div>
             </div><!--/.row-->
         </div><!--/.packages-content-->
     </div><!--/.container-->
@@ -777,25 +777,26 @@
     border-radius: 7px;"
 >
 <i id="x-button" class="fa-solid fa-x fa-2xl" onclick="unbuy()"></i>
-    <span class="ch-container">
+<span class="ch-container">
+    <form method="post" id="form-contact-hidden">
         <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-1" style="padding: 0;padding-top: 20px; margin: 0; color: white;">
                 <label for="name-a352" class="u-label u-text-white-40 u-label-1">Имя</label>
-                <input type="text" placeholder="Enter your First Name" id="firstName" name="name"
+                <input type="text" placeholder="Enter your First Name" id="firstName-hidden" name="name"
                     class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white" required="">
         </div>
         <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-2" style="padding: 0;padding-top: 20px; margin: 0; color: white;">
             <label for="name-a352" class="u-label u-text-white-40 u-label-2">номер</label>
-            <input type="text" placeholder="Enter your number" id="lastName" name="name-1"
+            <input type="text" placeholder="Enter your number" id="lastName-hidden" name="name-1"
                 class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white" required="">
         </div>
         <div class="u-form-group u-form-message" style="padding: 0;padding-top: 20px; margin-bottom: 10px; color: white;">
             <label for="message-7dcd" class="u-label u-text-white-40 u-label-5">Ваше сообщение</label>
-            <textarea placeholder="Enter your message" rows="4" cols="50" id="message-7dcd" name="message"
+            <textarea placeholder="Enter your message" rows="4" cols="50" id="message-hidden" name="message"
                     class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white"></textarea>
         </div>
-        <button type="button" id="buttonjon" class="button button-submit" style="left: 50%; transform: translate(-50%, 0);">Submit</button>
-    </span>
-</form>
+        <button type="submit" id="submit-button-hidden" class="button button-submit" style="left: 50%; transform: translate(-50%, 0);">Submit</button>
+    </form>
+</span>
 
 
 <style>
@@ -811,6 +812,8 @@
     }
     #top {
         color: black;
+    }
+    #top-container {
         display: none;
     }
     .col-md-4-c.col-sm-6.second {
@@ -913,16 +916,16 @@
 
 
     function bottomClick() {
-        document.getElementById("bottom").style.display = "none"
-        document.getElementById("top").style.display = "block"
+        document.getElementById("bottom-container").style.display = "none"
+        document.getElementById("top-container").style.display = "block"
         $('.col-md-4-c.col-sm-6.first').slideUp(700)
         setTimeout(() => {
             $('.col-md-4-c.col-sm-6.second').slideDown(700)
         }, 750);
     }
     function topClick() {
-        document.getElementById("top").style.display = "none"
-        document.getElementById("bottom").style.display = "block"
+        document.getElementById("bottom-container").style.display = "block"
+        document.getElementById("top-container").style.display = "none"
         $('.col-md-4-c.col-sm-6.second').slideUp(700)
         setTimeout(() => {
             $('.col-md-4-c.col-sm-6.first').slideDown(700)
@@ -1015,7 +1018,7 @@
                     <textarea placeholder="Введите ваше сообщение (необязательно)" rows="4" cols="50" id="message-7dcd" name="message"
                               class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white"></textarea>
                 </div>
-                <button type="submit" id="buttonjon" class="button button-submit">Submit</button>
+                <button type="submit" id="submit-button" class="button button-submit">Submit</button>
             </form>
         </div>
     </div>
@@ -1388,46 +1391,78 @@
         b.className = "col-md-4"
     }
 
-    // setInterval(() => { // DON'T USE UNLESS FOR TESTING THE RESPONSIVNES
-    //     let width = window.innerWidth
-    //     if(width < 992) {
-    //         a.className = "col-md-4";
-    //         b.className = "col-md-4";
-    //     } else {
-    //         a.className = "col-md-6";
-    //         b.className = "col-md-6";
-    //     }
-    //     console.log(a)
-    //     console.log(width)
-    // },2000)
+    setInterval(() => { // DON'T USE UNLESS FOR TESTING THE RESPONSIVNES
+        let width = window.innerWidth
+        if(width < 992) {
+            a.className = "col-md-4";
+            b.className = "col-md-4";
+        } else {
+            a.className = "col-md-6";
+            b.className = "col-md-6";
+        }
+    },2000)
 
 
 </script>
 
 
 <script>
-    // const form = document.getElementById("formContact")
+    $("#formContact").submit(function(e) {
+        e.preventDefault();
+    });
+    $("#form-contact-hidden").submit(function(e) {
+        e.preventDefault();
+    });
 
-    // form.addEventListener("submit", event => {
-    //     event.preventDefault()
 
-    //     let data = new FormData(form)
+    let submitButton = document.getElementById("submit-button")
+    let submitButtonHidden = document.getElementById("submit-button-hidden")
 
-    //     fetch("http://192.168.1.9:8080/mail/sendMail", {
-    //         method: "POST",
-    //         body: JSON.stringify({
-    //             firstName: form[2],
-    //             lastName: form[3],
-    //             mail: form[4],
-    //             subject: form[5],
-    //             message: form[6]
-    //         }),
-    //         headers: {
-    //             "Content-type": "application/json; charset=UTF-8"
-    //         }
-    //     }).then(response => console.log(response.json())).then(response => console.log(response));
-    // })
+    submitButton.addEventListener("click", event => {
+        const Name = document.getElementById("firstName");
+        const Number = document.getElementById("lastName");
+        const Email = document.getElementById("email-7dcd");
+        const Message = document.getElementById("message-7dcd");
 
+        const obj = {
+            firstName:Name,
+            number:Number,
+            mail:Email,
+            message:Message
+        };
+        
+        fetch("ayubxonlox.com", {
+            method: 'POST',
+            headers: {
+                'Content-Type':'application/json',
+            },
+            body: JSON.stringify(obj),
+
+
+        }).then(response => console.log(response.json())).then(response => console.log(response));
+    });
+
+    submitButtonHidden.addEventListener("click", event => {
+        const Name = document.getElementById("firstName-hidden");
+        const Number = document.getElementById("lastName-hidden");
+        const Message = document.getElementById("message-hidden");
+
+        const objHidden = {
+            firstName:Name,
+            number:Number,
+            message:Message
+        };
+        
+        fetch("ayubxonlox.com", {
+            method: 'POST',
+            headers: {
+                'Content-Type':'application/json',
+            },
+            body: JSON.stringify(objHidden),
+
+
+        }).then(response => console.log(response.json())).then(response => console.log(response));
+    });
 
 </script>
 
