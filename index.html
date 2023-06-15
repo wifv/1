@@ -68,7 +68,6 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="https://kit.fontawesome.com/85edc960b6.js" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
@@ -757,8 +756,8 @@
                     
                 </div><!--/.col-->
                 
-                <div class="bottom-top-container responsive-bottom" id="bottom-container" onclick="bottomClick()"><i class="fa-solid fa-caret-down fa-4x" id="bottom"></i></div>
-                <div class="bottom-top-container responsive-top" id="top-container" onclick="topClick()"><i class="fa-solid fa-caret-up fa-4x" id="top" ></i></div>
+                <div class="bottom-top-container responsive-top" id="left-container" onclick="leftClick()"><i class="fa-solid fa-caret-left fa-4x" id="top" ></i></div>
+                <!-- <div class="bottom-top-container responsive-bottom" id="right-container" onclick="rightClick()"><i class="fa-solid fa-caret-right fa-4x" id="bottom"></i></div> -->
             </div><!--/.row-->
         </div><!--/.packages-content-->
     </div><!--/.container-->
@@ -781,25 +780,58 @@
     <form method="post" id="form-contact-hidden">
         <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-1" style="padding: 0;padding-top: 20px; margin: 0; color: white;">
                 <label for="name-a352" class="u-label u-text-white-40 u-label-1">Имя</label>
-                <input type="text" placeholder="Enter your First Name" id="firstName-hidden" name="name"
-                    class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white" required="">
+                <input type="text" placeholder="Введите свое имя" id="firstName-hidden" name="name"
+                    class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white" minlength="3" maxlength="46">
         </div>
         <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-2" style="padding: 0;padding-top: 20px; margin: 0; color: white;">
             <label for="name-a352" class="u-label u-text-white-40 u-label-2">номер</label>
-            <input type="text" placeholder="Enter your number" id="lastName-hidden" name="name-1"
-                class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white" required="">
+            <input type="text" placeholder="Введите свой номер" id="lastName-hidden" name="name-1"
+                class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white" minlength="7" maxlength="15">
+        </div>
+        <div class="u-form-email u-form-group u-form-partition-factor-2"  style="padding: 0;padding-top: 20px; margin: 0; color: white;">
+            <label for="email-7dcd" class="u-label u-text-grey-40 u-label-3">И-мэйл</label>
+            <input type="email" placeholder="Введите адрес эл. почты" id="email-hidden" name="email"
+                   class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white">
         </div>
         <div class="u-form-group u-form-message" style="padding: 0;padding-top: 20px; margin-bottom: 10px; color: white;">
             <label for="message-7dcd" class="u-label u-text-white-40 u-label-5">Ваше сообщение</label>
-            <textarea placeholder="Enter your message" rows="4" cols="50" id="message-hidden" name="message"
-                    class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white"></textarea>
+            <textarea placeholder="Введите ваше сообщение" rows="4" cols="50" id="message-hidden" name="message"
+                    class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white" minlength="3" maxlength="500"></textarea>
         </div>
-        <button type="submit" id="submit-button-hidden" class="button button-submit" style="left: 50%; transform: translate(-50%, 0);">Submit</button>
+        <button type="button" id="submit-button-hidden" class="button button-submit" style="left: 50%; transform: translate(-50%, 0);">Submit</button>
     </form>
 </span>
 
+<div class="response-show">
+    <span class="response-text-container">
+        <h2 id="response-text"></h2>
+    </span>
+    <i id="x-button-response" class="fa-solid fa-x fa-4x" onclick="responseClose()" style="cursor: pointer;"></i>
+</div>
 
 <style>
+    .response-show {
+        display: none;
+        position: fixed;
+        border-radius: 8px;
+        text-align: center;
+        background-color: rgb(123, 236, 109);
+        height: 115px;
+        width: 50%;
+        left: 25%;
+        top: 50%;
+        transform: translate(0, -50%);
+        z-index: 3;
+    }
+
+    #x-button-response {
+        color: rgb(49, 49, 49);
+        position: absolute;
+        margin-left: -23px;
+        z-index: 4;
+    }
+
+
     @media (max-width: 991px) {
         .bottom-top-container {left: 48%; bottom: 0; transform: translate(0, 100%);}
     }
@@ -813,9 +845,9 @@
     #top {
         color: black;
     }
-    #top-container {
+    /* #right-container {
         display: none;
-    }
+    } */
     .col-md-4-c.col-sm-6.second {
         display: none;
     }
@@ -830,11 +862,12 @@
     }
 
     #ch {
+        z-index: 2;
         position: fixed;
         display: none;
         background-color: rgba(0, 0, 0, 0.4);
         width: 60%;
-        height: 60%;
+        height: 66%;
         border-radius: 7px;
         top: 20%;
         left: 20%;
@@ -855,27 +888,32 @@
         #ch {width: 40%; left: 30%;}
     }
     @media (max-width: 767px) {
-        #ch {height: 60%; width: 100%; left: 0;}
+        #ch {height: 66%; width: 100%; left: 0;}
     }
     @media screen and (max-height: 700px) {
-        #ch {height: 79%;}
+        #ch {height: 80%;}
     }
     @media screen and (max-height: 800px) {
-        #ch {height: 70%;}
+        #ch {height: 79%;}
     }
     @media screen and (min-height: 975px) {
-        #ch {height: 54%;}
+        #ch {height: 62%;}
     }
     @media screen and (min-height: 1050px) {
-        #ch {height: 48%;}
+        #ch {height: 58%;}
     }
     @media screen and (min-height: 1180px) {
-        #ch {height: 44%;}
+        #ch {height: 54%;}
     }
     @media screen and (min-height: 1300px) {
-        #ch {height: 38%;}
+        #ch {height: 48%;}
+    }
+    .col-md-4-c.col-sm-6 {
+        overflow: hidden;
     }
 </style>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
 <script>
     let x = document.getElementById("x-button");
@@ -888,48 +926,50 @@
     function unbuy() {
         $('#ch').slideUp()
     }
-
-
-
-
-//     function bottomClick() {
-//         document.getElementById("1-").style.display = "none"
-//         document.getElementById("2-").style.display = "none"
-//         document.getElementById("3-").style.display = "none"
-//         document.getElementById("4-").style.display = "none"
-//         document.getElementById("5-").style.display = "none"
-//         document.getElementById("6-").style.display = "none"
-
-//         $('.col-md-4-c.col-sm-6.toRight').slideDown(800)
-//     }
-//     function topClick() {
-//         document.getElementById("1-b").style.display = "none"
-//         document.getElementById("2-b").style.display = "none"
-//         document.getElementById("3-b").style.display = "none"
-//         document.getElementById("4-b").style.display = "none"
-//         document.getElementById("5-b").style.display = "none"
-//         document.getElementById("6-b").style.display = "none"
-
-//         $('.col-md-4-c.col-sm-6').slideDown(800)
-
-//     }
-
-
-    function bottomClick() {
-        document.getElementById("bottom-container").style.display = "none"
-        document.getElementById("top-container").style.display = "block"
-        $('.col-md-4-c.col-sm-6.first').slideUp(700)
-        setTimeout(() => {
-            $('.col-md-4-c.col-sm-6.second').slideDown(700)
-        }, 750);
+    
+    
+    function toggleLeft() {
+        
     }
-    function topClick() {
-        document.getElementById("bottom-container").style.display = "block"
-        document.getElementById("top-container").style.display = "none"
-        $('.col-md-4-c.col-sm-6.second').slideUp(700)
-        setTimeout(() => {
-            $('.col-md-4-c.col-sm-6.first').slideDown(700)
-        }, 750);
+    function toggleRight() {
+
+    }
+
+
+    $(document).ready(function(){
+        $("#left-container").click(function(){
+            // document.getElementById("left-container").style.display = "none"
+            // document.getElementById("right-container").style.display = "block"
+            $(".col-md-4-c.col-sm-6.first").animate({
+                width: "toggle"
+            });
+            $(".col-md-4-c.col-sm-6.second").animate({
+            width: "toggle"
+            });
+
+        });
+    });
+
+
+    // function bottomClick() {
+        // document.getElementById("bottom-container").style.display = "none"
+        // document.getElementById("top-container").style.display = "block"
+    //     $('.col-md-4-c.col-sm-6.first').slideUp(700)
+    //     setTimeout(() => {
+    //         $('.col-md-4-c.col-sm-6.second').slideDown(700)
+    //     }, 750);
+    // }
+    // function topClick() {
+    //     document.getElementById("bottom-container").style.display = "block"
+    //     document.getElementById("top-container").style.display = "none"
+    //     $('.col-md-4-c.col-sm-6.second').slideUp(700)
+    //     setTimeout(() => {
+    //         $('.col-md-4-c.col-sm-6.first').slideDown(700)
+    //     }, 750);
+    // }
+
+    function responseClose(){
+        $('.response-show').slideUp(500)
     }
 
 // </script>
@@ -973,7 +1013,7 @@
     <br>
     <div class="about-us-v1">
             <br><br>
-            <h1 style="">About us</h1> <br>
+            <h1>About us</h1> <br>
             <p>Мы в Yasmin Tour считаем, что отдых должен быть не только красочным и запоминающимся, но и доступным и легким</p>
             <p>И наша цель - сделать туризм доступным, комфортным и захватывающим, предлагая высококачественные услуги и незабываемые приключения в каждом путешествии. </p>
             <a href="https://www.instagram.com" target="_blank">
@@ -1001,22 +1041,22 @@
                 <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-1">
                     <label for="name-a352" class="u-label u-text-grey-40 u-label-1">Имя</label>
                     <input type="text" placeholder="Введите свое имя" id="firstName" name="name"
-                           class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white" required="">
+                           class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white" minlength="3" maxlength="46">
                 </div>
                 <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-2">
                     <label for="name-a352" class="u-label u-text-grey-40 u-label-2">номер</label>
                     <input type="text" placeholder="Введите свой номер" id="lastName" name="name-1"
-                           class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white" required="">
+                           class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white" minlength="7" maxlength="15">
                 </div>
                 <div class="u-form-email u-form-group u-form-partition-factor-2">
                     <label for="email-7dcd" class="u-label u-text-grey-40 u-label-3">И-мэйл</label>
-                    <input type="email" placeholder="Введите адрес эл. почты (необязательно)" id="email-7dcd" name="email"
+                    <input type="email" placeholder="Введите адрес эл. почты" id="email-7dcd" name="email"
                            class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white">
                 </div>
                 <div class="u-form-group u-form-message">
                     <label for="message-7dcd" class="u-label u-text-grey-40 u-label-5">Ваше сообщение</label>
-                    <textarea placeholder="Введите ваше сообщение (необязательно)" rows="4" cols="50" id="message-7dcd" name="message"
-                              class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white"></textarea>
+                    <textarea placeholder="Введите ваше сообщение" rows="4" cols="50" id="message-7dcd" name="message"
+                              class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white" minlength="3" maxlength="500"></textarea>
                 </div>
                 <button type="submit" id="submit-button" class="button button-submit">Submit</button>
             </form>
@@ -1028,7 +1068,6 @@
 <!-- Contact Form End-->
 
 
-<!-- footer-copyright start -->
 
 <style>
     .site-footer
@@ -1141,6 +1180,10 @@
 
 
     @media (max-width:539px) {
+        .response-show {
+            width: 70%;
+            left: 15%
+        }
         .about-us-v1 p {
             bottom: 30px;
         }
@@ -1300,9 +1343,9 @@
                     right: 40px;"
                     >
                     <h1 style="color: white; position: relative; right: 3px; font-size: 35px; margin-bottom: 10px;">Contact</h1>
-                    <p style="color: rgb(219, 219, 219); font-size: medium; position: relative; top: 8px; margin-bottom: 10px;">abcdefg@gmail.com</p>
-                    <a href="tel:" style="position: relative; color: rgb(219, 219, 219); font-size: medium;">+555 888 8666</a><br>
-                    <a href="tel:"><p style="color: rgb(219, 219, 219); font-size: medium;">+998 99 305 76 64 <br>   toshkent ad fasdf ddasf</p></a>
+                    <p style="color: rgb(219, 219, 219); font-size: medium; position: relative; top: 8px; margin-bottom: 10px;">rembraini@gmail.com</p>
+                    <a href="tel:" style="position: relative; color: rgb(219, 219, 219); font-size: medium;">+izmenyay alyo</a><br>
+                    <a href="tel:"><p style="color: rgb(219, 219, 219); font-size: medium;">+998 93 5433802<br>toshkent ad fasdf ddasf</p></a>
                     
                 </div>
                 <br>
@@ -1407,64 +1450,136 @@
 
 
 <script>
+    // form 1 start
+    let submitButtonHidden = document.getElementById("submit-button-hidden")
+    let submitButton = document.getElementById("submit-button")
+    
+    
+    submitButtonHidden.addEventListener("click", () => {
+        let Name = document.getElementById("firstName-hidden").value;
+        let Number = document.getElementById("lastName-hidden").value;
+        let Email = document.getElementById("email-hidden").value;
+        let Message = document.getElementById("message-hidden").value;
+        let blank = false;
+
+
+        if(Name=="" || Number=="" || Email=="" || Message=="") {
+            $('.response-show').slideDown(500)
+            document.getElementById("response-text").innerText = "поля не должны быть меньше 3 знаков";;
+            document.querySelector(".response-show").style.backgroundColor = "red";
+            document.getElementById("response-text").style.color = "white";
+            blank = true
+        }
+
+
+        if(!blank) {
+            fetch("http://localhost:8080/send-email", {
+                method: 'POST',
+                headers: {
+                    'Content-Type':'application/json',
+                },
+                body:JSON.stringify({
+                    firstName: Name,
+                    number: Number,
+                    mail: Email,
+                    message: Message
+                }),
+    
+            }).then(response => {
+                // console.log(response)
+                $('.response-show').slideDown(500)
+                if(response.ok && response.status != 400) {
+                    document.getElementById("response-text").innerText = "отзыв иметь успешно отправлен";
+                    document.querySelector(".response-show").style.backgroundColor = "lightgreen"
+                    document.getElementById("response-text").style.color = "black"
+                } else {
+                    document.getElementById("response-text").innerText = "случилась какая-то проблемка";
+                    document.querySelector(".response-show").style.backgroundColor = "red"
+                    document.getElementById("response-text").style.color = "white"
+                }
+            })
+        }
+
+    }); // form 1 end
+    //
+    //
+    //
+    //
+    //
+    //
+    //     form 2 start
     $("#formContact").submit(function(e) {
         e.preventDefault();
     });
-    $("#form-contact-hidden").submit(function(e) {
-        e.preventDefault();
-    });
 
+    submitButton.addEventListener("click", () => {
+        let Name = document.getElementById("firstName").value;
+        let Number = document.getElementById("lastName").value;
+        let Email = document.getElementById("email-7dcd").value;
+        let Message = document.getElementById("message-7dcd").value;
+        let isBlank = false
 
-    let submitButton = document.getElementById("submit-button")
-    let submitButtonHidden = document.getElementById("submit-button-hidden")
+        if(Name.length<3 || Number.length<7 || Email=="" || Message=="") {
+            $('.response-show').slideDown(500)
+            document.getElementById("response-text").innerText = "поля не должны иметь меньше 3 знаков";;
+            document.querySelector(".response-show").style.backgroundColor = "red";
+            document.getElementById("response-text").style.color = "white";
+            isBlank = true;
+        }
 
-    submitButton.addEventListener("click", event => {
-        const Name = document.getElementById("firstName");
-        const Number = document.getElementById("lastName");
-        const Email = document.getElementById("email-7dcd");
-        const Message = document.getElementById("message-7dcd");
-
-        const obj = {
-            firstName:Name,
-            number:Number,
-            mail:Email,
-            message:Message
-        };
+        if(!isBlank) {
+            fetch("http://localhost:8080/send-email", {
+                method: 'POST',
+                headers: {
+                    'Content-Type':'application/json',
+                },
+                body:JSON.stringify({
+                    firstName: Name,
+                    number: Number,
+                    mail: Email,
+                    message: Message
+                }),
         
-        fetch("ayubxonlox.com", {
-            method: 'POST',
-            headers: {
-                'Content-Type':'application/json',
-            },
-            body: JSON.stringify(obj),
-
-
-        }).then(response => console.log(response.json())).then(response => console.log(response));
-    });
-
-    submitButtonHidden.addEventListener("click", event => {
-        const Name = document.getElementById("firstName-hidden");
-        const Number = document.getElementById("lastName-hidden");
-        const Message = document.getElementById("message-hidden");
-
-        const objHidden = {
-            firstName:Name,
-            number:Number,
-            message:Message
-        };
-        
-        fetch("ayubxonlox.com", {
-            method: 'POST',
-            headers: {
-                'Content-Type':'application/json',
-            },
-            body: JSON.stringify(objHidden),
-
-
-        }).then(response => console.log(response.json())).then(response => console.log(response));
-    });
-
+            }).then(response => {
+                // console.log(response)
+                $('.response-show').slideDown(500)
+                if(response.ok && response.status != 400) {
+                    document.getElementById("response-text").innerText = "отзыв был успешно отправлен";
+                    document.querySelector(".response-show").style.backgroundColor = "lightgreen"
+                    document.getElementById("response-text").style.color = "black"
+                } else {
+                    document.getElementById("response-text").innerText = "случилась какая-то проблемка";
+                    document.querySelector(".response-show").style.backgroundColor = "red"
+                    document.getElementById("response-text").style.color = "white"
+                }
+            })
+        }
+    }); //form 2 end
 </script>
+
+<style>
+    @media (max-width: 1091px) {
+        #response-text {
+            font-size: 24px;
+            position: relative;
+            bottom:-5px;
+        }
+        #x-button-response {
+            position: relative;
+            bottom: -10px;
+        }
+    }
+    @media (max-width: 683px) {
+        #response-text {
+            top: -5px;
+        }
+        #x-button-response {
+            top: -10px;
+        }
+    }
+
+
+</style>
 
 </body>
 
