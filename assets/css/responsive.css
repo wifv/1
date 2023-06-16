@@ -65,8 +65,6 @@
 
 	.single-special-offer {margin-bottom: 30px;}
 
-	.home1-testm-single {}
-
 	.blog-content {max-width: 400px;margin: 30px auto;}
 	.blog-content .thumbnail .thumbnail-img img,.thumbnail-img-overlay{width: 100%; margin-left: 0px;}
 	.thumbnail-img-overlay{left: 0px;}
@@ -175,18 +173,37 @@
 }/*max-width:640px*/
 
 @media screen and (min-width: 540px) and (max-width: 991px){
-	.filtr-item {max-width: 500px;margin: 0 auto;}
+	.filtr-item {max-width: 500px;margin: 0 auto; left: 30%; transform: translate(-10%, 0);}
+}
+@media screen and (min-width: 540px) and (max-width: 891px){
+	.filtr-item {left: 24%;}
+}
+@media screen and (min-width: 540px) and (max-width: 791px){
+	.filtr-item {left: 17%;}
+}
+@media screen and (min-width: 540px) and (max-width: 610px){
+	.filtr-item {left: 15%;}
 }
 
 @media screen and (max-width: 540px){
 
-	.filtr-item {max-width: 350px;margin: 0 auto;}
+	.filtr-item {max-width: 350px;margin: 0 auto; left: 14%;}
 
 	.subscribe-title h2 {font-size: 28px;}
 
     .destination-p {position: relative; bottom: 24px;}
 
 }/*max-width:540px*/
+
+@media screen and (max-width: 510px){
+	.filtr-item {left: 11%;}
+}
+@media screen and (max-width: 470px){
+	.filtr-item {left: 8%;}
+}
+@media screen and (max-width: 440px){
+	.filtr-item {left: 0;}
+}
 
 @media (min-width:541px) and (max-width:740px) {
     #destination-turkey {height: 250px}

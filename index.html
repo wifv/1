@@ -85,7 +85,7 @@
                     <div class="logo">
                         <img class="logo-img" src="./assets/images/image.jpg    ">
                         <span class="logo_text"
-                              style="position: relative; font-family: 'Montserrat'; font-weight:normal;">
+                              style="position: relative; font-family: 'Montserrat'; font-weight:100; font-size: 22px;">
                             Yasmin Tour
                         </span>
                     </div><!-- /.logo-->
@@ -755,9 +755,7 @@
                     </div><!--/.single-package-item-->
                     
                 </div><!--/.col-->
-                
-                <div class="bottom-top-container responsive-top" id="left-container" onclick="leftClick()"><i class="fa-solid fa-caret-left fa-4x" id="top" ></i></div>
-                <!-- <div class="bottom-top-container responsive-bottom" id="right-container" onclick="rightClick()"><i class="fa-solid fa-caret-right fa-4x" id="bottom"></i></div> -->
+                <div class="bottom-top-container responsive-top" id="left-container"><i class="fa-solid fa-caret-right fa-4x" id="top" ></i></div>
             </div><!--/.row-->
         </div><!--/.packages-content-->
     </div><!--/.container-->
@@ -816,7 +814,7 @@
         border-radius: 8px;
         text-align: center;
         background-color: rgb(123, 236, 109);
-        height: 115px;
+        height: 140px;
         width: 50%;
         left: 25%;
         top: 50%;
@@ -825,7 +823,7 @@
     }
 
     #x-button-response {
-        color: rgb(49, 49, 49);
+        color: rgb(240, 240, 240);
         position: absolute;
         margin-left: -23px;
         z-index: 4;
@@ -935,16 +933,25 @@
 
     }
 
-
+    let str = "180deg"
     $(document).ready(function(){
         $("#left-container").click(function(){
-            // document.getElementById("left-container").style.display = "none"
-            // document.getElementById("right-container").style.display = "block"
+            
+            document.getElementById("left-container").style.rotate = str
+            if(str == "180deg") {
+                str = "360deg"
+            } else {
+                str = "180deg"
+            }
             $(".col-md-4-c.col-sm-6.first").animate({
                 width: "toggle"
+            },{
+                duration: 0
             });
             $(".col-md-4-c.col-sm-6.second").animate({
             width: "toggle"
+            },{
+                duration: 0
             });
 
         });
@@ -1450,6 +1457,7 @@
 
 
 <script>
+    document.getElementById("response-text").style.color = "white";
     // form 1 start
     let submitButtonHidden = document.getElementById("submit-button-hidden")
     let submitButton = document.getElementById("submit-button")
@@ -1463,11 +1471,10 @@
         let blank = false;
 
 
-        if(Name=="" || Number=="" || Email=="" || Message=="") {
+        if(Name=="" || Number=="") {
             $('.response-show').slideDown(500)
-            document.getElementById("response-text").innerText = "поля не должны быть меньше 3 знаков";;
-            document.querySelector(".response-show").style.backgroundColor = "red";
-            document.getElementById("response-text").style.color = "white";
+            document.getElementById("response-text").innerText = "aaaaaaaaaaaaaaaaaaaaaa";
+            document.querySelector(".response-show").style.backgroundColor = "#0c0c0c";
             blank = true
         }
 
@@ -1491,11 +1498,9 @@
                 if(response.ok && response.status != 400) {
                     document.getElementById("response-text").innerText = "отзыв иметь успешно отправлен";
                     document.querySelector(".response-show").style.backgroundColor = "lightgreen"
-                    document.getElementById("response-text").style.color = "black"
                 } else {
                     document.getElementById("response-text").innerText = "случилась какая-то проблемка";
-                    document.querySelector(".response-show").style.backgroundColor = "red"
-                    document.getElementById("response-text").style.color = "white"
+                    document.querySelector(".response-show").style.backgroundColor = "#0c0c0c"
                 }
             })
         }
@@ -1519,11 +1524,10 @@
         let Message = document.getElementById("message-7dcd").value;
         let isBlank = false
 
-        if(Name.length<3 || Number.length<7 || Email=="" || Message=="") {
+        if(Name.length<3 || Number.length<7) {
             $('.response-show').slideDown(500)
-            document.getElementById("response-text").innerText = "поля не должны иметь меньше 3 знаков";;
-            document.querySelector(".response-show").style.backgroundColor = "red";
-            document.getElementById("response-text").style.color = "white";
+            document.getElementById("response-text").innerText = "aaaaaaaaaaaaaaaaaaaaaa";;
+            document.querySelector(".response-show").style.backgroundColor = "#0c0c0c";
             isBlank = true;
         }
 
@@ -1546,11 +1550,9 @@
                 if(response.ok && response.status != 400) {
                     document.getElementById("response-text").innerText = "отзыв был успешно отправлен";
                     document.querySelector(".response-show").style.backgroundColor = "lightgreen"
-                    document.getElementById("response-text").style.color = "black"
                 } else {
                     document.getElementById("response-text").innerText = "случилась какая-то проблемка";
-                    document.querySelector(".response-show").style.backgroundColor = "red"
-                    document.getElementById("response-text").style.color = "white"
+                    document.querySelector(".response-show").style.backgroundColor = "#0c0c0c"
                 }
             })
         }
