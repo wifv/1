@@ -79,13 +79,13 @@
 <!-- main-menu Start -->
 <header class="top-area">
     <div class="header-area">
-        <div class="container">
+        <div class="container" id="navbar-container">
             <div class="row">
                 <div class="col-sm-2">
                     <div class="logo">
                         <img class="logo-img" src="./assets/images/image.jpg    ">
                         <span class="logo_text"
-                              style="position: relative; font-family: 'Montserrat'; font-weight:normal;">
+                              style="position: relative; font-family: 'Montserrat'; font-weight:100; font-size: 22px;">
                             Yasmin Tour
                         </span>
                     </div><!-- /.logo-->
@@ -101,10 +101,10 @@
                             </button><!-- / button-->
                         </div><!-- /.navbar-header-->
                         <div class="collapse navbar-collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li class="smooth-menu"><a href="#home">главная</a></li>
+                            <ul class="nav navbar-nav navbar-right" id="navbar-shh">
+                                <li class="smooth-menu"><a href="#home">Главная</a></li>
                                 <li class="smooth-menu"><a href="#gallery">Горящие туры</a></li>
-                                <li class="smooth-menu"><a href="#pack">Туры</a></li>
+                                <li class="smooth-menu"><a href="#pack">Все туры</a></li>
                                 <li class="smooth-menu"><a href="#spo">О нас</a></li>
                                 <li class="smooth-menu"><a href="#sec-f56f">Написать нам</a></li>
                                 <!--                                <li class="smooth-menu"><a href="#subs">subscription</a></li>-->
@@ -120,7 +120,7 @@
                 </div><!-- /.col-->
             </div><!-- /.row -->
         </div><!-- /.container-->
-        <a href="tel:+998935433802"><span id="number" style="position: absolute; top: 100px; right: 20px; font-size: medium;">+998 93 5433802</span></a>
+        <a href="tel:+998935433802"><span id="number" style="position: absolute; top: 120px; right: 20px; font-size: medium;">+998 93 5433802</span></a>
     </div><!-- /.header-area -->
 
 </header><!-- /.top-area-->
@@ -136,7 +136,7 @@
                     <div class="single-about-us">
                         <div class="about-us-txt" style="position: relative; top: 40px;">
                             <h2>
-                                Исследуйте красоту нашего мира вместе с нами
+                                Исследуйте красоту мира вместе с нами
                             </h2>
                             <div class="about-btn">
                                 <ul>
@@ -192,7 +192,7 @@
                                 Отели "Люкс" качества
                             </a>
                         </h2>
-                        <p>Бронируйте с нами самые роскошные, удобные и удобные отели</p>
+                        <p>Бронируйте с нами самые роскошные, стильные и удобные отели</p>
                     </div><!--/.service-content-->
                 </div><!--/.single-service-box-->
             </div><!--/.col-->
@@ -231,10 +231,10 @@
         <div class="gallery-details">
             <div class="gallary-header text-center">
                 <h2>
-                    Самые частые туры
+                    Горящие туры
                 </h2>
                 <p>
-                    Вам там точно понравится
+                    Посмотрите что чаще всего выбирают
                 </p>
             </div><!--/.gallery-header-->
             <div class="gallery-box">
@@ -550,19 +550,19 @@
 
                 <div class="col-md-4-c col-sm-6 second" id="1-b">
                     <div class="single-package-item">
-                        <img src="./assets/images/poselok-bali-v-severnoy-chasti-ostrova-krit.jpg" alt="package-place">
+                        <img src="./assets/images/photo_276031.jpg" alt="package-place">
                         <div class="single-package-item-txt">
-                            <h3>Остров govna<span class="pull-right"> от $799</span></h3>
+                            <h3>Бодрум<span class="pull-right"> от $799</span></h3>
                             <div class="packages-para">
                                 <p>
-                                    <span class="darker" style="width: 100%">Крит - пляжи, история и культура</span><br><br>
-                                    Приглашаем вас посетить Крит, где вы сможете погрузиться в богатую историю этого места одновременно наслаждаясь отдыхом
+                                    <span class="darker" style="width: 100%">Изысканный, очаровательный и солнечный</span><br><br>
+                                    Бодрум - это идеальное место для тех, кто хочет погрузиться в богатую историю, насладиться красотой природы и одновременно наслаждаться отдыхом с видом на кристально-чистый океан
                                 </p>
                             </div><!--/.packages-para-->
                             <div class="packages-review">
                                 <p>
                                     <span>Наша оценка</span>
-                                    <i class="fa fa-star-half-full"></i>
+                                    <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
@@ -585,13 +585,14 @@
 
                 <div class="col-md-4-c col-sm-6 second" id="2-b">
                     <div class="single-package-item">
-                        <img src="./assets/images/poselok-bali-v-severnoy-chasti-ostrova-krit.jpg" alt="package-place">
+                        <img src="./assets/images/Kurortnyy-Dalaman-1.jpg" alt="package-place">
                         <div class="single-package-item-txt">
-                            <h3>Остров Крита<span class="pull-right"> от $799</span></h3>
+                            <h3>Даламан<span class="pull-right"> от $799</span></h3>
                             <div class="packages-para">
                                 <p>
-                                    <span class="darker" style="width: 100%">Крит - пляжи, история и культура</span><br><br>
-                                    Приглашаем вас посетить Крит, где вы сможете погрузиться в богатую историю этого места одновременно наслаждаясь отдыхом
+                                    <span class="darker" style="width: 100%">Океан, горы, природа</span><br><br>
+                                    Даламан - уникальный райский уголок Турции, где величественные горы, зазеркалье Эгейского моря и великолепные пляжи 
+                                    создают волшебную симфонию природы, оставляя вам восхитительные впечатления с самого первого мгновения.
                                 </p>
                             </div><!--/.packages-para-->
                             <div class="packages-review">
@@ -620,19 +621,20 @@
 
                 <div class="col-md-4-c col-sm-6 second" id="3-b">
                     <div class="single-package-item">
-                        <img src="./assets/images/poselok-bali-v-severnoy-chasti-ostrova-krit.jpg" alt="package-place">
+                        <img src="./assets/images/dreamstime_m_102876812.webp" alt="package-place">
                         <div class="single-package-item-txt">
-                            <h3>Остров Крита<span class="pull-right"> от $799</span></h3>
+                            <h3>Стамбул<span class="pull-right"> от $799</span></h3>
                             <div class="packages-para">
                                 <p>
-                                    <span class="darker" style="width: 100%">Крит - пляжи, история и культура</span><br><br>
-                                    Приглашаем вас посетить Крит, где вы сможете погрузиться в богатую историю этого места одновременно наслаждаясь отдыхом
+                                    <span class="darker" style="width: 100%">Культура и гостеприимство в одном из самых древних городов</span><br><br>
+                                    Стамбул - город с богатой историей и культурой, где величественные дворцы и мечети переплетаются с современными галереями и сценами, а его кухня предлагает 
+                                    уникальное сочетание восточных специй и западных вкусов, создавая незабываемый опыт для гурманов.
                                 </p>
                             </div><!--/.packages-para-->
                             <div class="packages-review">
                                 <p>
                                     <span>Наша оценка</span>
-                                    <i class="fa fa-star-half-full"></i>
+                                    <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
@@ -654,13 +656,14 @@
 
                 <div class="col-md-4-c col-sm-6 second" id="4-b">
                     <div class="single-package-item">
-                        <img src="./assets/images/poselok-bali-v-severnoy-chasti-ostrova-krit.jpg" alt="package-place">
+                        <img src="./assets/images/dostoprimechatelnosti-sharm-jel-shejha.jpg" alt="package-place">
                         <div class="single-package-item-txt">
-                            <h3>Остров Крита<span class="pull-right"> от $799</span></h3>
+                            <h3>Египет<span class="pull-right"> от $799</span></h3>
                             <div class="packages-para">
                                 <p>
-                                    <span class="darker" style="width: 100%">Крит - пляжи, история и культура</span><br><br>
-                                    Приглашаем вас посетить Крит, где вы сможете погрузиться в богатую историю этого места одновременно наслаждаясь отдыхом
+                                    <span class="darker" style="width: 100%">Шарм=Эль-Шейх есть чудо на земле</span><br><br>
+                                    Добро пожаловать в Шарм-эль-Шейх! Этот удивительный курорт в Египте предлагает красивые пляжи,
+                                    подводные приключения и роскошные отели. Приезжайте и наслаждайтесь отдыхом
                                 </p>
                             </div><!--/.packages-para-->
                             <div class="packages-review">
@@ -689,14 +692,15 @@
 
                 <div class="col-md-4-c col-sm-6 second" id="5-b">
                     <div class="single-package-item">
-                        <img src="./assets/images/poselok-bali-v-severnoy-chasti-ostrova-krit.jpg" alt="package-place">
+                        <img src="./assets/images/batumi-georgia2.jpg" alt="package-place">
                         <div class="single-package-item-txt">
-                            <h3>Остров Крита<span class="pull-right"> от $799</span></h3>
+                            <h3>Батуми<span class="pull-right"> от $799</span></h3>
                             <div class="packages-para">
                                 <p>
-                                    <span class="darker" style="width: 100%">Крит - пляжи, история и культура</span><br><br>
-                                    Приглашаем вас посетить Крит, где вы сможете погрузиться в богатую историю этого места одновременно наслаждаясь отдыхом
-                                </p>
+                                    <span class="darker" style="width: 100%">Тысячклетняя история и архитектура </span><br><br>
+                                    Батуми - город, где история, культура и кулинарное искусство сочетаются в совершенстве. 
+                                    Величественная архитектура, включая Путепроводную гору, и современные
+                                    здания привлекают внимание, раскрывая богатое наследие города.
                             </div><!--/.packages-para-->
                             <div class="packages-review">
                                 <p>
@@ -724,23 +728,18 @@
 
                 <div class="col-md-4-c col-sm-6 second" id="6-b">
                     <div class="single-package-item">
-                        <img src="./assets/images/poselok-bali-v-severnoy-chasti-ostrova-krit.jpg" alt="package-place">
+                        <img src="./assets/images/evropa.jpg" alt="package-place">
                         <div class="single-package-item-txt">
-                            <h3>Остров Крита<span class="pull-right"> от $799</span></h3>
+                            <h3>Специализированные экскурсионные туры в Европе или Турции<span class="pull-right">  </span></h3>
                             <div class="packages-para">
                                 <p>
-                                    <span class="darker" style="width: 100%">Крит - пляжи, история и культура</span><br><br>
-                                    Приглашаем вас посетить Крит, где вы сможете погрузиться в богатую историю этого места одновременно наслаждаясь отдыхом
+                                    <span class="darker" style="width: 100%">Индивидуально подобранный тур для вас</span><br><br>
+                                    Мы сможем подобрать вам специализированный экскурсионный тур по Европе или Турции. Вы посетите несколько городов и стран на протяжении недели и вас будет сопровождать гид в ваших архитектурных и культурных походах
                                 </p>
                             </div><!--/.packages-para-->
                             <div class="packages-review">
                                 <p>
-                                    <span>Наша оценка</span>
-                                    <i class="fa fa-star-half-full"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
+                                    
                                     
                                 </p>
                             </div><!--/.packages-review-->
@@ -755,9 +754,7 @@
                     </div><!--/.single-package-item-->
                     
                 </div><!--/.col-->
-                
-                <div class="bottom-top-container responsive-top" id="left-container" onclick="leftClick()"><i class="fa-solid fa-caret-left fa-4x" id="top" ></i></div>
-                <!-- <div class="bottom-top-container responsive-bottom" id="right-container" onclick="rightClick()"><i class="fa-solid fa-caret-right fa-4x" id="bottom"></i></div> -->
+                <div class="bottom-top-container responsive-top" id="left-container"><i class="fa-solid fa-caret-right fa-4x" id="top" ></i></div>
             </div><!--/.row-->
         </div><!--/.packages-content-->
     </div><!--/.container-->
@@ -816,7 +813,7 @@
         border-radius: 8px;
         text-align: center;
         background-color: rgb(123, 236, 109);
-        height: 115px;
+        height: 140px;
         width: 50%;
         left: 25%;
         top: 50%;
@@ -825,7 +822,7 @@
     }
 
     #x-button-response {
-        color: rgb(49, 49, 49);
+        color: rgb(240, 240, 240);
         position: absolute;
         margin-left: -23px;
         z-index: 4;
@@ -833,7 +830,11 @@
 
 
     @media (max-width: 991px) {
-        .bottom-top-container {left: 48%; bottom: 0; transform: translate(0, 100%);}
+        .bottom-top-container {
+            left: 48%;
+            bottom: 0;
+            transform: translate(0, 100%);
+        }
     }
     .filtr-item a:hover + .item-title {
         background-color: #0c0c0c;
@@ -935,16 +936,29 @@
 
     }
 
-
+    let str = "180deg"
     $(document).ready(function(){
         $("#left-container").click(function(){
-            // document.getElementById("left-container").style.display = "none"
-            // document.getElementById("right-container").style.display = "block"
+            document.getElementById("left-container").style.rotate = str
+
+            if(str == "180deg") {
+                str = "360deg"
+            } else {
+                str = "180deg"
+            }
             $(".col-md-4-c.col-sm-6.first").animate({
                 width: "toggle"
+            },{
+                duration: 0
             });
+            if(window.matchMedia("(max-width: 991px)").matches) {
+                document.getElementById("left-container").style.top = "101%"
+                document.getElementById("left-container").style.right = "48%"
+            }
             $(".col-md-4-c.col-sm-6.second").animate({
             width: "toggle"
+            },{
+                duration: 0
             });
 
         });
@@ -1013,11 +1027,11 @@
     <br>
     <div class="about-us-v1">
             <br><br>
-            <h1>About us</h1> <br>
-            <p>Мы в Yasmin Tour считаем, что отдых должен быть не только красочным и запоминающимся, но и доступным и легким</p>
+            <h1>О нас</h1> <br>
+            <p>Мы в Yasmin Tour считаем, что отдых должен быть не только красочным и запоминающимся, но доступным и легким</p>
             <p>И наша цель - сделать туризм доступным, комфортным и захватывающим, предлагая высококачественные услуги и незабываемые приключения в каждом путешествии. </p>
             <a href="https://www.instagram.com" target="_blank">
-                <button class="button button-about">Read more</button>
+                <button class="button button-about">Узнать больше</button>
             </a>
     </div>
 
@@ -1032,7 +1046,7 @@
         <h1 class="u-text u-text-default u-text-1">Связь<br></h1>
         <h6 id="text1" class="u-text u-text-default u-text-2">Напишите нам</h6>
         <h6 id="text2" class="u-text u-text-3">И мы свяжемся с вами в течении 10 минут</h6>
-        <h6 id="text3" class="u-text u-text-default u-text-4">Или вы можете позвонить сами<br>по номеру: +998935433802</h6>
+        <h6 id="text3" class="u-text u-text-default u-text-4">Или свяжитесь с нами сами: +998935433802</h6>
         <div class="u-custom-color-1 u-form u-form-1">
 
             <form id="formContact" method="post" class="u-clearfix u-form-spacing-20 u-form-vertical u-inner-form" style="padding: 30px; border-color: black; background-color: #f9f9f9; top: 10px;">
@@ -1040,17 +1054,17 @@
                 <input type="hidden" id="pageId" name="pageId" value="5018189">
                 <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-1">
                     <label for="name-a352" class="u-label u-text-grey-40 u-label-1">Имя</label>
-                    <input type="text" placeholder="Введите свое имя" id="firstName" name="name"
+                    <input type="text" placeholder="Введите ваше имя" id="firstName" name="name"
                            class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white" minlength="3" maxlength="46">
                 </div>
                 <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-2">
                     <label for="name-a352" class="u-label u-text-grey-40 u-label-2">номер</label>
-                    <input type="text" placeholder="Введите свой номер" id="lastName" name="name-1"
+                    <input type="text" placeholder="Введите ващ номер" id="lastName" name="name-1"
                            class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white" minlength="7" maxlength="15">
                 </div>
                 <div class="u-form-email u-form-group u-form-partition-factor-2">
                     <label for="email-7dcd" class="u-label u-text-grey-40 u-label-3">И-мэйл</label>
-                    <input type="email" placeholder="Введите адрес эл. почты" id="email-7dcd" name="email"
+                    <input type="email" placeholder="Введите ваш адрес эл. почты" id="email-7dcd" name="email"
                            class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white">
                 </div>
                 <div class="u-form-group u-form-message">
@@ -1058,7 +1072,7 @@
                     <textarea placeholder="Введите ваше сообщение" rows="4" cols="50" id="message-7dcd" name="message"
                               class="u-border-white u-custom-color-1 u-input u-input-rectangle u-text-white" minlength="3" maxlength="500"></textarea>
                 </div>
-                <button type="submit" id="submit-button" class="button button-submit">Submit</button>
+                <button type="submit" id="submit-button" class="button button-submit">Отправить</button>
             </form>
         </div>
     </div>
@@ -1154,7 +1168,7 @@
         #cop {left: -3px; top: 30px;}
         #our-contact
         {
-            top: -332px;
+            top: -360px;
             left: -45px;
         }
         .social-icons
@@ -1331,7 +1345,7 @@
                         <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
                     </ul>
                     <span id="nomerjon"><a href="tel:+998935433802" style="font-size: medium; color: white;">+998 93 5433802</a></span>
-                    <span id="cop" style="position: relative; right: 90px; top: 57px; text-align: center;">Copyright 2023 wifv<br><span style="visibility: hidden;">x</span>All right reserved.</span>
+                    <span id="cop" style="position: relative; right: 120px; top: 57px; text-align: center;">Copyright 2023 Yasmin Tour<br><span style="visibility: hidden;">xxxxx</span>All right reserved.</span>
                 </span>
 
                 <div class="container" id="our-contact" style=
@@ -1342,10 +1356,10 @@
                     bottom: 107px;
                     right: 40px;"
                     >
-                    <h1 style="color: white; position: relative; right: 3px; font-size: 35px; margin-bottom: 10px;">Contact</h1>
-                    <p style="color: rgb(219, 219, 219); font-size: medium; position: relative; top: 8px; margin-bottom: 10px;">rembraini@gmail.com</p>
-                    <a href="tel:" style="position: relative; color: rgb(219, 219, 219); font-size: medium;">+izmenyay alyo</a><br>
-                    <a href="tel:"><p style="color: rgb(219, 219, 219); font-size: medium;">+998 93 5433802<br>toshkent ad fasdf ddasf</p></a>
+                    <h1 style="color: white; position: relative; right: 3px; font-size: 35px; margin-bottom: 10px;">Контакты</h1>
+                    <p style="color: rgb(219, 219, 219); font-size: medium; position: relative; top: 8px; margin-bottom: 10px;">ytouruz@gmail.com</p>
+                    <a href="tel:" style="position: relative; color: rgb(219, 219, 219); font-size: medium;">+998 99 3057664</a><br>
+                    <a href="tel:"><p style="color: rgb(219, 219, 219); font-size: medium;">+998 93 5433802<br>Ташкент</p></a>
                     
                 </div>
                 <br>
@@ -1357,7 +1371,7 @@
     /* #instagram-fixed {display: none; position: fixed; bottom: 4px; right: -4px;} */
 
     @media (min-width: 646px) {
-        #footer-wrapper {position: relative; top: 20px;}
+        #footer-wrapper {position: relative; top: 20px;}ё
         #footer-img {position: relative; top: 25px;}
     }
 
@@ -1365,7 +1379,7 @@
         .u-section-1 {margin-bottom: -185px;}
     }
     
-    @media (min-width: 1337px) {
+    @media (min-width: 1162px) {
         #our-contact {top: -15px;}
     }
 
@@ -1450,6 +1464,7 @@
 
 
 <script>
+    document.getElementById("response-text").style.color = "white";
     // form 1 start
     let submitButtonHidden = document.getElementById("submit-button-hidden")
     let submitButton = document.getElementById("submit-button")
@@ -1463,11 +1478,10 @@
         let blank = false;
 
 
-        if(Name=="" || Number=="" || Email=="" || Message=="") {
+        if(Name=="" || Number=="") {
             $('.response-show').slideDown(500)
-            document.getElementById("response-text").innerText = "поля не должны быть меньше 3 знаков";;
-            document.querySelector(".response-show").style.backgroundColor = "red";
-            document.getElementById("response-text").style.color = "white";
+            document.getElementById("response-text").innerText = "aaaaaaaaaaaaaaaaaaaaaa";
+            document.querySelector(".response-show").style.backgroundColor = "#0c0c0c";
             blank = true
         }
 
@@ -1491,11 +1505,9 @@
                 if(response.ok && response.status != 400) {
                     document.getElementById("response-text").innerText = "отзыв иметь успешно отправлен";
                     document.querySelector(".response-show").style.backgroundColor = "lightgreen"
-                    document.getElementById("response-text").style.color = "black"
                 } else {
                     document.getElementById("response-text").innerText = "случилась какая-то проблемка";
-                    document.querySelector(".response-show").style.backgroundColor = "red"
-                    document.getElementById("response-text").style.color = "white"
+                    document.querySelector(".response-show").style.backgroundColor = "#0c0c0c"
                 }
             })
         }
@@ -1519,11 +1531,10 @@
         let Message = document.getElementById("message-7dcd").value;
         let isBlank = false
 
-        if(Name.length<3 || Number.length<7 || Email=="" || Message=="") {
+        if(Name.length<3 || Number.length<7) {
             $('.response-show').slideDown(500)
-            document.getElementById("response-text").innerText = "поля не должны иметь меньше 3 знаков";;
-            document.querySelector(".response-show").style.backgroundColor = "red";
-            document.getElementById("response-text").style.color = "white";
+            document.getElementById("response-text").innerText = "aaaaaaaaaaaaaaaaaaaaaa";;
+            document.querySelector(".response-show").style.backgroundColor = "#0c0c0c";
             isBlank = true;
         }
 
@@ -1546,11 +1557,9 @@
                 if(response.ok && response.status != 400) {
                     document.getElementById("response-text").innerText = "отзыв был успешно отправлен";
                     document.querySelector(".response-show").style.backgroundColor = "lightgreen"
-                    document.getElementById("response-text").style.color = "black"
                 } else {
                     document.getElementById("response-text").innerText = "случилась какая-то проблемка";
-                    document.querySelector(".response-show").style.backgroundColor = "red"
-                    document.getElementById("response-text").style.color = "white"
+                    document.querySelector(".response-show").style.backgroundColor = "#0c0c0c"
                 }
             })
         }

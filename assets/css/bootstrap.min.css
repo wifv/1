@@ -4838,11 +4838,27 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 
     .navbar-right {
         float: right!important;
-        margin-right: -134px
+        margin-right: -95px
     }
 
     .navbar-right~.navbar-right {
         margin-right: 0
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar-right {
+        margin-right: -200px
+    }
+}
+@media (min-width: 1444px) {
+    .navbar-right {
+        margin-right: -280px
+    }
+}
+@media (min-width: 1666px) {
+    .navbar-right {
+        margin-right: -340px
     }
 }
 

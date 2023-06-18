@@ -48,7 +48,7 @@
 	.logo {float: left;}
 	.main-menu .navbar-toggle {float: right;}
 	.navbar-collapse {padding-right: 15px;padding-left: 15px;}
-	.main-menu .nav li a {font-size: 14px;padding: 0px 1px 10px;display: inline-block;}
+	.main-menu .nav li a {font-size: 14px;display: inline-block; top: 0;}
     .main-menu .nav li a::before {bottom: 0px;}
     .col-sm-10 {top: 15px;}
 	.sticky-wrapper.is-sticky .main-menu .nav a:before {bottom: 0px;}
@@ -65,8 +65,6 @@
 
 	.single-special-offer {margin-bottom: 30px;}
 
-	.home1-testm-single {}
-
 	.blog-content {max-width: 400px;margin: 30px auto;}
 	.blog-content .thumbnail .thumbnail-img img,.thumbnail-img-overlay{width: 100%; margin-left: 0px;}
 	.thumbnail-img-overlay{left: 0px;}
@@ -77,9 +75,25 @@
 
 }
 
+@media (min-width: 992px) {
+    #navbar-container {
+        width: 1010px;
+    }
+    #footer-img {
+        position: relative;
+        top: 20px;
+    }
+}
 
 @media screen and (min-width:1200px) {
     #turkey-img {top: -13px;}
+    .logo {position: relative;right: 20%;}
+}
+@media screen and (min-width:1444px) {
+    .logo {right: 40%;}
+}
+@media screen and (min-width:1666px) {
+    .logo {right: 60%;}
 }
 
 @media screen and (max-width:1200px){
@@ -105,7 +119,7 @@
 @media screen and (max-width:1000px){
 	.sticky-wrapper .navbar-collapse.collapse.in{background: #0c0c0c; position: relative; width: 112%; margin-left: -14px; padding-left: 27px; bottom: 10px; right: 10px;}
 	.logo {float: left; font-size: large;}
-	.main-menu .navbar-toggle {float: right; margin: 17px 0; bottom: 14px;}
+	.main-menu .navbar-toggle {float: right; margin: 17px 0; bottom: 0px;}
 	.navbar-collapse {padding-right: 15px;padding-left: 15px;}
 	.main-menu .nav li a {font-size: 14px;padding: 0px 1px 10px;display: inline-block;}
 	.sticky-wrapper.is-sticky .main-menu .nav a:before {bottom: 0px;}
@@ -175,18 +189,37 @@
 }/*max-width:640px*/
 
 @media screen and (min-width: 540px) and (max-width: 991px){
-	.filtr-item {max-width: 500px;margin: 0 auto;}
+	.filtr-item {max-width: 500px;margin: 0 auto; left: 30%; transform: translate(-10%, 0);}
+}
+@media screen and (min-width: 540px) and (max-width: 891px){
+	.filtr-item {left: 24%;}
+}
+@media screen and (min-width: 540px) and (max-width: 791px){
+	.filtr-item {left: 17%;}
+}
+@media screen and (min-width: 540px) and (max-width: 610px){
+	.filtr-item {left: 15%;}
 }
 
 @media screen and (max-width: 540px){
 
-	.filtr-item {max-width: 350px;margin: 0 auto;}
+	.filtr-item {max-width: 350px;margin: 0 auto; left: 14%;}
 
 	.subscribe-title h2 {font-size: 28px;}
 
     .destination-p {position: relative; bottom: 24px;}
 
 }/*max-width:540px*/
+
+@media screen and (max-width: 510px){
+	.filtr-item {left: 11%;}
+}
+@media screen and (max-width: 470px){
+	.filtr-item {left: 8%;}
+}
+@media screen and (max-width: 440px){
+	.filtr-item {left: 0;}
+}
 
 @media (min-width:541px) and (max-width:740px) {
     #destination-turkey {height: 250px}
