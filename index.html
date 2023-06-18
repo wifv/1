@@ -939,13 +939,8 @@
     let str = "180deg"
     $(document).ready(function(){
         $("#left-container").click(function(){
-            document.getElementById("left-container").style.rotate = str
-
-            if(str == "180deg") {
-                str = "360deg"
-            } else {
-                str = "180deg"
-            }
+            // document.getElementById("left-container").style.display = "none"
+            // document.getElementById("right-container").style.display = "block"
             $(".col-md-4-c.col-sm-6.first").animate({
                 width: "toggle"
             },{
