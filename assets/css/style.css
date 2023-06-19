@@ -907,6 +907,11 @@ html,body{
     -o-transition:.5s;
     transition: .5s;
 }
+@media (min-width: 422px) {
+    .single-package-item {
+        height: 680px;
+    }
+}
 .single-package-item-txt{
     padding: 0 25px;
 }
